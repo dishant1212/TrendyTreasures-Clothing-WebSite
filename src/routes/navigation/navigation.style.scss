@@ -1,0 +1,61 @@
+.navigation {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    // border-bottom: 2px solid black;
+    .logo-name-container{
+      height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    
+    }
+  
+    .logo{
+      height: 70px;
+      width: 80px;
+      margin-left: 8px;
+      margin-top: 2px;
+      background-image: url("../../assets/logo.jpg");
+      background-size: cover;
+      cursor: pointer;
+    }
+    .name01{
+      margin-top: 12px;
+      margin-left: 20px;
+      font-size: 2.2rem;
+      font-weight: 800;
+      font-family:sans-serif ;
+      color: rgb(216, 41, 41);
+      // text-shadow: 3px 3px rgb(10, 194, 10) ;
+      text-shadow: 3px 3px rgb(255, 239, 16) ;
+    }
+    .name02{
+      margin-top: 12px;
+      font-size: 1.6rem;
+      font-weight: 800;
+      font-family:sans-serif ;
+      color: green;
+      // text-shadow: 2px 2px rgb(10, 194, 10) ;
+      // text-shadow: 3px 3px rgb(233, 18, 18) ;
+    }
+  
+    .nav-links-container {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  
+      .nav-link {
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    }
+  }
+// .logo-container:hover{
+//   animation:logoDesign 2s ease-in 0s infinite normal;
+
+// }
