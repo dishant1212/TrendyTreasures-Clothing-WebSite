@@ -1,6 +1,8 @@
 import "./sign-in.style.scss"
 import { Fragment, useEffect } from "react";
 import { getRedirectResult} from "firebase/auth";
+import { useContext } from "react";
+import {userContext} from "../../user-context/user.context"
 
 import {
   auth,
@@ -25,7 +27,8 @@ const SignIn=()=>{
 
     const [formFaild,setFormFaild]  = useState(defaultFormFaild)
     const {displayName,email,password,confirmPassword} = formFaild
-    console.log(formFaild)
+             const {setCurrentUser}   = useContext(userContext)
+            
 
     const resetFormFields=()=>{
         setFormFaild(defaultFormFaild)
@@ -50,7 +53,8 @@ const SignIn=()=>{
         event.preventDefault();
 
       try{
-      const response=await signInAuthWithEmailAndPassword(email,password)
+      const {user}=await signInAuthWithEmailAndPassword(email,password)
+      setCurrentUser(user)
        resetFormFields();
       }catch(error){
          if(error.code === "auth/invalid-credential"){
