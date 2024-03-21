@@ -1,8 +1,9 @@
 import "./sign-in.style.scss"
 import { Fragment, useEffect } from "react";
-import { getRedirectResult} from "firebase/auth";
 import { useContext } from "react";
-import {userContext} from "../../user-context/user.context"
+import { getRedirectResult} from "firebase/auth";
+import {userContext} from "../../contexts/user.context";
+
 
 import {
   auth,

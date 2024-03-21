@@ -1,7 +1,7 @@
 import "./sign-up.style.scss"
 import { useContext, useState } from "react"
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils"
-import { userContext } from "../../user-context/user.context"
+import { userContext } from "../../contexts/user.context"
 
 
 const defaultFormFaild = {
